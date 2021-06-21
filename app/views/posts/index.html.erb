@@ -1,2 +1,12 @@
-<h1>Hi</h1>
+<h1>All ads</h1>
 
+<div>
+  <% @posts.each do |post| %>
+    <p>
+      <%= post.title %>
+    </p>
+    <p>
+      <%= post.picture_url %>
+    </p>
+  <% end %>
+</div>
