@@ -5,8 +5,9 @@
 
   <p><%= @post.body %></p><br>
 
-  <p><%= @post.user_name %>, <%= @post.created_at %></p>
-
+  <p><%= @post.user_name %>, <%= @post.created_at %></p><br>
+  
+  <%= link_to "Edit", edit_post_path(@post) %><br><br>
   <%= link_to "Back to the main page",  posts_path %>
 </div>
 
