@@ -1,0 +1,12 @@
+<h1>All ads</h1>
+
+<div>
+  <% @posts.each do |post| %>
+    <p>
+      <%= post.title %>
+    </p>
+    <p>
+      <%= post.picture_url %>
+    </p>
+  <% end %>
+</div>
