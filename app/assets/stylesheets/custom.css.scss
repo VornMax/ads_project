@@ -1,0 +1,48 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 60px;
+}
+
+.center {
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  padding: 20px 25px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+input {
+  height: 36px;
+  width: 500px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+}
+
+textarea {
+  height: 200px;
+  width: 500px;
+  margin-bottom: 20px;
+}
