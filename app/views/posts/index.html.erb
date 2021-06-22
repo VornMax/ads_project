@@ -3,10 +3,10 @@
 <div class="container">
   <% @posts.each do |post| %>
     <h3>
-      <%= post.title %>
+      <%= link_to post.title, post %>
     </h3></br>
     <p>
       <%= post.picture_url %>
-    </p>
+    </p></br>
   <% end %>
 </div>
