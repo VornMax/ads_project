@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(title: "", body: "", user_name: "", picture_url:"")
+    @post = Post.new(title: "", body: "", picture_url:"")
     
     if @post.save
       redirect_to @post
