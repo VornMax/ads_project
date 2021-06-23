@@ -1,6 +1,8 @@
 <h1>All ads</h1>
 
 <div class="container">
+  <%= link_to "New Post", new_post_path %>
+
   <% @posts.each do |post| %>
     <h3>
       <%= link_to post.title, post %>
@@ -10,3 +12,5 @@
     </p></br>
   <% end %>
 </div>
+
+
