@@ -19,17 +19,17 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# Use Automatic Ruby code style checking tool.
+gem 'rubocop', '~> 1.17'
+# A runtime developer console and IRB alternative with powerful introspection capabilities.
+gem 'pry', '~> 0.14.1'
+# OpenBSD's bcrypt() password hashing algorithm
+gem 'bcrypt', '~> 3.1', '>= 3.1.16'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-# Use bootstrap
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-# Use rubocop
-gem 'rubocop', '~> 1.17'
-# Use pry 
-gem 'pry', '~> 0.14.1'
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
