@@ -3,46 +3,48 @@
   <div class="form">
   	<div>
       <%= form.label :name %><br>
-      <%= form.text_field :name %>
       <% @user.errors.full_messages_for(:name).each do |message| %>
         <div><%= message %></div>
       <% end %>
+      <%= form.text_field :name %>
     </div>
 
     <div>
       <%= form.label :surname %><br>
-      <%= form.text_field :surname %>
       <% @user.errors.full_messages_for(:surname).each do |message| %>
         <div><%= message %></div>
       <% end %>
+      <%= form.text_field :surname %>
     </div>
 
     <div>
       <%= form.label :email %><br>
-      <%= form.text_field :email %>
       <% @user.errors.full_messages_for(:email).each do |message| %>
         <div><%= message %></div>
       <% end %>
+      <%= form.text_field :email %>
     </div>
 
     <div>
       <%= form.label :password %><br>
-      <%= form.text_field :password %>
       <% @user.errors.full_messages_for(:password).each do |message| %>
         <div><%= message %></div>
       <% end %>
+      <%= form.text_field :password, type: "password" %>
     </div>
 
     <div>
       <%= form.label :password_confirmation, "Confirmation" %><br>
-      <%= form.text_field :password_confirmation %>
       <% @user.errors.full_messages_for(:password_confirmation).each do |message| %>
         <div><%= message %></div>
       <% end %>
+      <%= form.text_field :password_confirmation, type: "password" %>
     </div>
 
     <div>
       <%= form.submit "Create my account" %>
     </div>
+
+    <%= link_to "Back to the main page",  posts_path %>
   </div>
 <% end %>
