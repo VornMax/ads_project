@@ -6,3 +6,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+  100.times do |n|
+    title = Faker::Lorem.sentence
+    picture_url = Faker::Lorem.sentence
+    body = Faker::Lorem.paragraphs(1)
+    created_at = 2.years.ago..Time.now
+    user_id = 6
+    Post.create!(
+               title: title,
+               body: body,
+               picture_url: title,
+               created_at: created_at,
+               user_id: 6
+                            )
+  end
