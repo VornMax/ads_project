@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = User.find_by(id: session[:user_id])
     
     if @post.save
       redirect_to @post
