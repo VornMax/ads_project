@@ -11,7 +11,7 @@
   
   <% @posts.each do |post| %>
     <h3><%= link_to post.title, post %></h3></br>
-    <div><%= post.picture_url %></div>
+    <!-- <div><%= post.picture_url %></div> -->
   <% end %>
   <%= will_paginate @posts %>
 </div>
