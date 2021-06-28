@@ -7,10 +7,12 @@
 
   <p><%= @post.created_at %></p><br>
 
-  <%= link_to "Edit", edit_post_path(@post) %><br><br>
-  <%= link_to "Delete", post_path(@post),
+  <% if logged_in? %>
+    <%= link_to "Edit", edit_post_path(@post) %><br><br>
+    <%= link_to "Delete", post_path(@post),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %><br><br>
+  <% end %>
   <%= link_to "Back to the main page",  posts_path %>
 </div>
 
