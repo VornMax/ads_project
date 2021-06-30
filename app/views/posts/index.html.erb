@@ -1,16 +1,19 @@
 <h1>All ads</h1>
 
 <div class="container">
-  <%= link_to "New Post", new_post_path %>
-
+  <% if logged_in? %>
+    <%= link_to "User", current_user %><br>
+    <%= link_to "New Post", new_post_path %>
+  <% else %>
+    <%= link_to "Log in", login_path %><br>
+    <%= link_to "Register", signup_path %>
+  <% end %> 
+  
   <% @posts.each do |post| %>
-    <h3>
-      <%= link_to post.title, post %>
-    </h3></br>
-    <p>
-      <%= post.picture_url %>
-    </p></br>
+    <h3><%= link_to post.title, post %></h3></br>
+    <!-- <div><%= post.picture_url %></div> -->
   <% end %>
+  <%= will_paginate @posts %>
 </div>
 
 

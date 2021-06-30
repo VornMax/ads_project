@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.paginate page: params[:page], per_page: 15
   end
 
   def show
@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = User.find_by(id: session[:user_id])
     
     if @post.save
       redirect_to @post
